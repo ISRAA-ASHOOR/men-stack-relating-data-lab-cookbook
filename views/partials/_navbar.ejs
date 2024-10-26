@@ -1,0 +1,18 @@
+<nav>
+  <div class="landing-header">
+    <div class="logo-container">
+      <div class="icon"></div>
+    <a href="/">Home</a>
+  </div>
+  <div class="nav-links">
+    <% if(user) { %>
+      <a href="/users">Explore Our Community</a>
+      <a href="/users/<%=user._id%>/foods">View my Pantry</a>
+      <a href="/auth/sign-out">Sign Out</a>
+    <% } else { %>
+      <a href="/auth/sign-in">Sign In</a>
+      <a href="/auth/sign-up">Sign Up</a>
+    <% } %>
+  </div>
+  </div>
+</nav>
